@@ -1,10 +1,15 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from "react";
+import { StyleSheet, Text, View } from "react-native";
+import firebase from "firebase";
+import SignupForm from "./components/SignupForm";
+import SigninForm from "./components/SigninForm";
 
 export default function App() {
+  useEffect(() => {}, []);
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <SignupForm />
+      <SigninForm />
     </View>
   );
 }
@@ -12,8 +17,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "space-around",
   },
 });
